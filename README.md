@@ -22,4 +22,5 @@
 
 - 初次部署後請備份 `.env`, `jms_data/`, `mysql_data/`
 - 若部署錯誤，請查閱 `docker logs jms_all`
-- nginx 內設定 location 需要自行修改，憑證也可替換成自身的
+- nginx 內 volume/nginx/etc/conf.d/default.conf  server_name 與 proxy_set_header Host  需要自行修改為自身 Hostname 。
+- 自身憑證請替換至 volume/nginx/etc/conf.d/ssl.conf
