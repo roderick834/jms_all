@@ -24,3 +24,26 @@
 - 若部署錯誤，請查閱 `docker logs jms_all`
 - nginx 內 volume/nginx/etc/conf.d/default.conf  server_name 與 proxy_set_header Host  需要自行修改為自身 Hostname 。
 - 自身憑證請替換至 volume/nginx/etc/conf.d/ssl.conf
+
+
+
+JumpServer Docker One-Click Deployment Guide
+
+This deployment package includes a complete integrated containerized JumpServer environment (with MySQL and Redis). It supports Host mode, data persistence, automatic initialization, and debugging tools.
+
+Steps to Use
+
+First, modify the .env file.
+Run init.sh to create JumpServer.
+Log in to JumpServer:
+Default URL: http://<your host IP>
+Username: admin / Password: admin (You will be prompted to change the password upon first login)
+Health Check and Debugging
+
+Run ./check.sh
+Important Notes
+
+After the initial deployment, please back up the .env, jms_data/, and mysql_data/ directories.
+If the deployment fails, check the logs using docker logs jms_all.
+In the Nginx configuration file located at volume/nginx/etc/conf.d/default.conf, you need to manually update the server_name and proxy_set_header Host to match your hostname.
+Replace the default certificate with your own in volume/nginx/etc/conf.d/ssl.conf.
