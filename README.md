@@ -1,16 +1,13 @@
-# JumpServer Docker 一鍵部署說明（jms_all 企業級版）
+# JumpServer Docker 一鍵部署說明
 
 本部署包包含完整的 JumpServer 一體化容器部署環境（含 MySQL、Redis），支援 Host 模式、資料持久化、自動初始化與除錯工具。
 
 ## 使用步驟
 
-1. 解壓縮部署包：
 
-    tar zxvf jumpserver_deploy.tgz && cd jumpserver_deploy
+1. 先修改 .env 檔案 
 
-2. 執行初始化腳本：
-
-    ./init.sh
+2. 執行 init.sh 建立 jumpserver 
 
 3. 登入 JumpServer：
 
@@ -25,3 +22,4 @@
 
 - 初次部署後請備份 `.env`, `jms_data/`, `mysql_data/`
 - 若部署錯誤，請查閱 `docker logs jms_all`
+- nginx 內設定 location 需要自行修改，憑證也可替換成自身的
