@@ -25,7 +25,7 @@
 - nginx 內 volume/nginx/etc/conf.d/default.conf  server_name 與 proxy_set_header Host  需要自行修改為自身 Hostname 。
 - 自身憑證請替換至 volume/nginx/etc/conf.d/ssl.conf
 
-
+---
 
 JumpServer Docker One-Click Deployment Guide
 
